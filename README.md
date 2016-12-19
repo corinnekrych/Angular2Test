@@ -14,3 +14,6 @@ Create [PonyRacer](PonyRacer/README.md) all by hands. Putting together tools lik
 
 ### Step2: Angular-cli
 Create [PonyRacerCli](PonyRacerCli/README.md) using angular-cli.
+
+### Step3: Templates
+Go to [PonyRacerTemplate](PonyRacerTemplate/README.md) an initial copy of [PonyRacerCli](PonyRacerCli/README.md) with more work on templates.
