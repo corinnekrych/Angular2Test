@@ -10,4 +10,7 @@ npm install -f typescript
 ## Projects
 
 ### Step1: all by hands
-Create [PonyRacer](PonyRacer/README.md).
+Create [PonyRacer](PonyRacer/README.md) all by hands. Putting together tools like: typescript, systemjs.
+
+### Step2: Angular-cli
+Create [PonyRacerCli](PonyRacerCli/README.md) using angular-cli.
