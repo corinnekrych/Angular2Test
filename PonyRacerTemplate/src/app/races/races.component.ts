@@ -9,7 +9,9 @@ export class RacesComponent {
   public races: Array<any>; 
   private index = 0;
   public length: number;
-
+  public backgroundColor = "blue";
+  public textColor = "yellow";
+  
   constructor() {
     this.races = ["Blue bird", "Elephant catsle"];
     this.length = this.races.length;
@@ -21,5 +23,4 @@ export class RacesComponent {
     console.log(`:::::Races ${this.index}`);
     return this.races;
   }
-
 }

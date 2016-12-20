@@ -5,3 +5,9 @@
 <app-races></app-races>
 <h3>Number of users: {{numberOfUsers}}</h3>
 <h3 [hidden]=true>Number of users: <p style="display: inline-block" [textContent]="numberOfUsers"></p></h3>
+
+<div>
+<input [(ngModel)]="user.name" placeholder="what's your name?"/>
+<input #box (click)="onClickInput(box.value)" placeholder="what's your name?"/>
+</div>
+

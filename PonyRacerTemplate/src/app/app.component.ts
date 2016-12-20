@@ -9,4 +9,7 @@ export class AppComponent {
   title = 'PonyRacer';
   numberOfUsers = 146;
   user = {name: 'Corinne'};
+  onClickInput(value: string): void {
+    this.user.name = value;
+  }
 }
