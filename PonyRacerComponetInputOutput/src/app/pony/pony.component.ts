@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Input} from '@angular/core'
-
+import {Pony} from '../model/pony'
 @Component({
   selector: 'app-pony',
   templateUrl: './pony.component.html',
@@ -8,7 +8,7 @@ import {Input} from '@angular/core'
 })
 export class PonyComponent implements OnInit {
   
-  @Input() pony: any;
+  @Input() pony: Pony;
   
   constructor() { }
 

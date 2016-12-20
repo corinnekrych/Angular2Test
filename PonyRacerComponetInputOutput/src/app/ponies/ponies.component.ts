@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PonyComponent} from '../pony/pony.component'
+import {Pony} from '../model/pony'
 
 @Component({
   selector: 'app-ponies',
@@ -7,7 +7,7 @@ import {PonyComponent} from '../pony/pony.component'
   styleUrls: ['./ponies.component.css']
 })
 export class PoniesComponent implements OnInit {
-  ponies: Array<any>
+  ponies: Array<Pony>
   
   constructor() { 
     this.ponies = [{name: "Bella", age:3},{name:"Silicia", age: 6}];
