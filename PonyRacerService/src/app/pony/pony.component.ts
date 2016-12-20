@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {Pony} from '../model/pony'
+import {Pony} from '../../model/pony'
 
 @Component({
   selector: 'app-pony',
