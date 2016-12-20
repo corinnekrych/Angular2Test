@@ -17,3 +17,6 @@ Create [PonyRacerCli](PonyRacerCli/README.md) using angular-cli.
 
 ### Step3: Templates
 Go to [PonyRacerTemplate](PonyRacerTemplate/README.md) an initial copy of [PonyRacerCli](PonyRacerCli/README.md) with more work on templates.
+
+### Step4: Directives/component Input Output
+Go to [PonyRacerComponentInputOutput](PonyRacerComponentInputOutput/README.md) to see how to use comppnent input output.

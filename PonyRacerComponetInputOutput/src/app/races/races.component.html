@@ -1,0 +1,9 @@
+<h3>List of races</h3>
+<ul>
+  <li [ngClass]="{ odd: odd, even: even }" 
+      *ngFor="let race of races; let odd=odd; let even=even">{{race}}</li>
+</ul>
+<div [style.background]="backgroundColor">
+  <p>Number of races: {{races.length}}</p>
+</div>
+<button (click)="refreshRaces()">Refresh Races</button>
