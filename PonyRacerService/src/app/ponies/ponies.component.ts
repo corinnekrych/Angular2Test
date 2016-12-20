@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Pony} from '../../model/pony'
-
+import { Pony } from '../../model/pony'
+import { PoniesService } from '../../service/ponies.service'
 @Component({
   selector: 'app-ponies',
   templateUrl: './ponies.component.html',
@@ -9,8 +9,9 @@ import {Pony} from '../../model/pony'
 export class PoniesComponent implements OnInit {
   ponies: Array<Pony>
   
-  constructor() { 
-    this.ponies = [{name: "Bella", age:3},{name:"Silicia", age: 6}];
+  constructor(private service: PoniesService) { 
+    this.ponies = this.service.list();
+    //this.ponies = [{name: "Bella", age:3},{name:"Silicia", age: 6}];
   }
 
   ngOnInit() {

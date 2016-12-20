@@ -1,4 +1,3 @@
 export class Pony {
-    name: string;
-    age: number;
+    constructor(public name: string, public age: number) { }
 }

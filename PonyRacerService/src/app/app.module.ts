@@ -9,6 +9,8 @@ import { LogDirective } from './log.directive';
 import { PoniesComponent } from './ponies/ponies.component';
 import { PonyComponent } from './pony/pony.component';
 
+import {PoniesService} from '../service/ponies.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { PonyComponent } from './pony/pony.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PoniesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

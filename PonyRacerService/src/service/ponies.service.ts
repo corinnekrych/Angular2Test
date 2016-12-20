@@ -8,6 +8,7 @@ export class PoniesService {
   }
 
   list() {
-    return this.http.get('/api/ponies');
+    return [new Pony("Cincella", 4), new Pony("Mimi", 4)];
+    //return this.http.get('/ponies');
   }
 }

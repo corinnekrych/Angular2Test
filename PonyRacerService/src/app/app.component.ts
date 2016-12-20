@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { JsonPipe } from '@angular/common';
-import { Pony } from './model/pony'
+import { Pony } from '../model/pony'
 
 @Component({
   selector: 'app-root',
