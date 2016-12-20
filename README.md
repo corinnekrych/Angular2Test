@@ -20,3 +20,7 @@ Go to [PonyRacerTemplate](PonyRacerTemplate/README.md) an initial copy of [PonyR
 
 ### Step4: Directives/component Input Output
 Go to [PonyRacerComponentInputOutput](PonyRacerComponentInputOutput/README.md) to see how to use comppnent input output.
+
+### Step5: Service and Http call
+Go to [PonyRacerService](PonyRacerService/README.md) to see how to retriev ponies from rest api.
+A server is runnung in [PoniesServer](PoniesServer/README.md).

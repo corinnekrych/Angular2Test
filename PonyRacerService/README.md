@@ -41,6 +41,36 @@ export class PoniesService {
 ```TypeScript
   constructor(private service: PoniesService) { 
     this.ponies = this.service.list();
-    //this.ponies = [{name: "Bella", age:3},{name:"Silicia", age: 6}];
   }
+```
+
+## http and Observable
+Let's modify our ponies service to fetch data from http.
+In `ponies.service.ts`, define list http call will return a rx Observable flux:
+
+```TypeScript
+export class PoniesService {
+  public ponies: Array<Pony>;
+  constructor(private http: Http) {}
+
+  list(): Observable<Array<Pony>> {
+    return this.http.get('http://localhost:8001/ponies')
+                    .map(res => res.json())
+                    .catch(this.handleError);
+  }
+...
+}
+```
+
+In `ponies.component.ts`, we need to subscribe to the Observable, we dod it at init time:
+```TypeScript
+export class PoniesComponent implements OnInit {
+  ponies: Array<Pony> 
+  constructor(private service: PoniesService) { }
+  ngOnInit(): void {
+    this.service.list().subscribe(items => {
+      this.ponies = items;
+    });
+  }
+}
 ```

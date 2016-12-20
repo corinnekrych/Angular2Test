@@ -9,12 +9,12 @@ import { PoniesService } from '../../service/ponies.service'
 export class PoniesComponent implements OnInit {
   ponies: Array<Pony>
   
-  constructor(private service: PoniesService) { 
-    this.ponies = this.service.list();
-    //this.ponies = [{name: "Bella", age:3},{name:"Silicia", age: 6}];
-  }
+  constructor(private service: PoniesService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.service.list().subscribe(items => {
+      this.ponies = items;
+    });
   }
 
 }
