@@ -1,0 +1,24 @@
+<h1>
+  {{title}}
+</h1>
+<h2>Welcome {{user?.name}}</h2>
+
+<app-login></app-login>
+
+
+<app-races></app-races>
+<h3>Number of users: {{numberOfUsers}}</h3>
+<h3 [hidden]=true>Number of users: <p style="display: inline-block" [textContent]="numberOfUsers"></p></h3>
+
+<div>
+<!--<input [(ngModel)]="user.name" placeholder="what's your name?"/>-->
+<input #box (click)="onClickInput(box.value)" placeholder="what's your name?"/>
+<br/><br/>
+<input appLog placeholder="Let's log it"/>
+
+<app-ponies></app-ponies>
+
+<p>Adding my own Pony</p>
+<app-pony [pony]="{name:'Co', age:3}" (ponySelected)="alert($event)"></app-pony>
+</div>
+

@@ -24,3 +24,6 @@ Go to [PonyRacerComponentInputOutput](PonyRacerComponentInputOutput/README.md) t
 ### Step5: Service and Http call
 Go to [PonyRacerService](PonyRacerService/README.md) to see how to retriev ponies from rest api.
 A server is runnung in [PoniesServer](PoniesServer/README.md).
+
+### Step6: Form
+Go to [PonyRacerForm](PonyRacerForm/README.md).
