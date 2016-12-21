@@ -1,0 +1,75 @@
+<head>
+  <meta charset="utf-8">
+  <title>Journal</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body style="margin:-8px">
+<nav class="navbar navbar-pf-vertical">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <img class="navbar-brand-icon" src="/assets/img/logo-alt.svg" alt="" />{{title}}
+    </a>
+  </div>
+</nav>
+<nav class="navbar navbar-default navbar-pf" role="navigation">
+
+  <div class="collapse navbar-collapse navbar-collapse-1">
+    <div class="collapse navbar-collapse navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-primary">
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="active">
+          <a href="#">Add</a>
+        </li>
+        <li>
+          <a href="#">History</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical">
+  <div class="row row-cards-pf">
+    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-pf card-pf-accented card-pf-aggregate-status">
+        <h2 class="card-pf-title">
+          <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
+        </h2>
+        <div class="card-pf-body">
+          <p class="card-pf-aggregate-status-notifications">
+            <span class="card-pf-aggregate-status-notification"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-pf card-pf-accented card-pf-aggregate-status">
+        <h2 class="card-pf-title">
+          <span class="fa fa-shield"></span><span class="card-pf-aggregate-status-count">0</span> Ipsum
+        </h2>
+        <div class="card-pf-body">
+          <p class="card-pf-aggregate-status-notifications">
+            <span class="card-pf-aggregate-status-notification"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>

@@ -1,36 +1,33 @@
 # Journal
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
+This project test the integration with [PatternFly]() and experiment how to create Angular2 component.
+It uses:
+- [Vertical Navigation](http://www.patternfly.org/pattern-library/navigation/vertical-navigation/#_code)
 
+# How to create it step by step
+```bash
 npm install -g angular-cli@1.0.0-beta.24
 ng new journal
 app.component.ts -> Trials and tribulation
+
+npm install patternfly --save
+ng g component navigation
+
 ng serve
+```
+* create src/css, add patternfly.css + patternfly-additions.css
+* create src/fonts/** from node_modules/paternfly/dist/fonts
+* in component add css
+```TypeScript
+@Component({
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.css', 'css/patternfly.css', 'css/patternfly-additions.css']
+})
+```
+
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+The app will automatically reload if you change any of the source files.
