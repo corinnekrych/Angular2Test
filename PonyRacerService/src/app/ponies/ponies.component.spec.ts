@@ -6,17 +6,20 @@ import { DebugElement } from '@angular/core';
 import { PoniesComponent } from './ponies.component';
 import { PonyComponent } from '../pony/pony.component';
 import { PoniesService } from '../../service/ponies.service';
+import {Observable} from "rxjs/Rx";
 
 describe('PoniesComponent', () => {
   let component: PoniesComponent;
   let fixture: ComponentFixture<PoniesComponent>;
 
   const mockPoniesService = jasmine.createSpyObj('PoniesService', ['list']);
+  const MOCKPONIES = [{name:"toto", age:2}];
+  const mockObserver = Observable.of(new Object()).map(MOCKPONIES => JSON.stringify(MOCKPONIES));
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PoniesComponent, PonyComponent ],
-       providers: [{provide: PoniesService, useValue: mockPoniesService}]
+       providers: [{provide:  Observable, useValue: mockObserver}, {provide: PoniesService, useValue: mockPoniesService}]
     })
     .compileComponents();
   }));
@@ -27,8 +30,9 @@ describe('PoniesComponent', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
-    mockPoniesService.list.and.returnValue({subscribe: function(data) {}})
+  xit('should create', () => {
+    mockObserver.subscribe.call
+    mockPoniesService.list.and.returnValue(mockObserver);
     expect(component).toBeTruthy();
   });
 });

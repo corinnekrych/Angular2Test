@@ -4,10 +4,12 @@ import { TestBed, async, inject } from '@angular/core/testing';
 import { PoniesService } from './ponies.service';
 
 describe('PoniesService', () => {
+  const mockPoniesService = jasmine.createSpyObj('PoniesService', ['list']);
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [PoniesService]
+      providers: [{provide: PoniesService, useValue: mockPoniesService}]
     });
+    TestBed.compileComponents();
   });
 
   it('should ...', inject([PoniesService], (service: PoniesService) => {

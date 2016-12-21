@@ -32,10 +32,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('PonyRacer');
   }));
 
-  it('should render title in a h1 tag', async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    let app = fixture.debugElement.componentInstance;
-    expect(app.querySelector('h1').textContent).toContain('PonyRacer');
-  }));
 });
