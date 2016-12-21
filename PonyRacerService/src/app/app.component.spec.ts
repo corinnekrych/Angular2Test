@@ -2,13 +2,20 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { PonyComponent } from './pony/pony.component'
+import { PoniesComponent } from './ponies/ponies.component'
+import { RacesComponent } from './races/races.component'
+import { PoniesService } from '../service/ponies.service'
+
 
 describe('AppComponent', () => {
+  const mockPoniesService = jasmine.createSpyObj('PoniesService', ['list']);
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, RacesComponent, PoniesComponent, PonyComponent
       ],
+      providers: [{provide: PoniesService, useValue: mockPoniesService}]
     });
     TestBed.compileComponents();
   });
@@ -28,7 +35,7 @@ describe('AppComponent', () => {
   it('should render title in a h1 tag', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('PonyRacer');
+    let app = fixture.debugElement.componentInstance;
+    expect(app.querySelector('h1').textContent).toContain('PonyRacer');
   }));
 });

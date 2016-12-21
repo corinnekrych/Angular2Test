@@ -21,7 +21,8 @@ export class PonyComponent implements OnInit {
 
   ngOnInit() {
     this.ponyInitialized.emit(this.pony);
-    console.log(`Pony ${this.pony.name} initialized`);
+    if (this.pony && this.pony.name) {
+      console.log(`Pony ${this.pony.name} initialized`);
+    } 
   }
-
 }

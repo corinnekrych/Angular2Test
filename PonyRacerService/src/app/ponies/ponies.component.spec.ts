@@ -4,14 +4,19 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { PoniesComponent } from './ponies.component';
+import { PonyComponent } from '../pony/pony.component';
+import { PoniesService } from '../../service/ponies.service';
 
 describe('PoniesComponent', () => {
   let component: PoniesComponent;
   let fixture: ComponentFixture<PoniesComponent>;
 
+  const mockPoniesService = jasmine.createSpyObj('PoniesService', ['list']);
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PoniesComponent ]
+      declarations: [ PoniesComponent, PonyComponent ],
+       providers: [{provide: PoniesService, useValue: mockPoniesService}]
     })
     .compileComponents();
   }));
@@ -22,7 +27,8 @@ describe('PoniesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
+    mockPoniesService.list.and.returnValue({subscribe: function(data) {}})
     expect(component).toBeTruthy();
   });
 });

@@ -7,7 +7,7 @@
 <h3 [hidden]=true>Number of users: <p style="display: inline-block" [textContent]="numberOfUsers"></p></h3>
 
 <div>
-<input [(ngModel)]="user.name" placeholder="what's your name?"/>
+<!--<input [(ngModel)]="user.name" placeholder="what's your name?"/>-->
 <input #box (click)="onClickInput(box.value)" placeholder="what's your name?"/>
 <br/><br/>
 <input appLog placeholder="Let's log it"/>
