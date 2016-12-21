@@ -74,3 +74,21 @@ export class PoniesComponent implements OnInit {
   }
 }
 ```
+### Test and Mock
+
+* To run only one test prefix `it` with `f`
+* Mock:
+in `app.component.spec.ts`: you need to mock the different layers:
+```TypeScript
+describe('AppComponent', () => {
+  const mockPoniesService = jasmine.createSpyObj('PoniesService', ['list']);
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent, RacesComponent, PoniesComponent, PonyComponent
+      ],
+      providers: [{provide: PoniesService, useValue: mockPoniesService}]
+    });
+    TestBed.compileComponents();
+  });
+```
