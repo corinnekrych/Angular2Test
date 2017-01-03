@@ -44,7 +44,7 @@ fhc login corinnekrych@gmail.com
 ```bash
 fhc app create --project=vgayu6xzyn6w6vzcjqkhv3ie --title=ponycloud --type=cloud_nodejs --env=dev 
 ```
-* Check which deployement env is availablr
+* Check which deployement env is available
 ```bash
 > fhc admin environments list 
 ┏━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
@@ -74,6 +74,7 @@ fhc app stage --app=vgayu6usl4u7ms75tftz7q5g --env=evals-dev
             {
               "msg": "Hello world"
             }
+            
 ### Add ponies endpoint
 Similar to [lib/hello.js](lib/hello.js) create [lib/ponies.js](lib/ponies.js) which retruns a list of ponies.
 Add express route in [application.js](application.js).
