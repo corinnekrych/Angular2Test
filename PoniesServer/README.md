@@ -44,9 +44,19 @@ fhc login corinnekrych@gmail.com
 ```bash
 fhc app create --project=vgayu6xzyn6w6vzcjqkhv3ie --title=ponycloud --type=cloud_nodejs --env=dev 
 ```
-TODO: how to deploy with `fhc`.
-
-* go to UI and deply/start
+* Check which deployement env is availablr
+```bash
+> fhc admin environments list 
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ ID        ┃ Label       ┃ Deploy on Create ┃ Deploy on Update ┃ MBaaS Targets     ┃ Modified     ┃
+┣━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━┫
+┃ evals-dev ┃ Development ┃ false            ┃ false            ┃ tom1-mbaas1-evals ┃ 8 months ago ┃
+┗━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+```
+* Deploy your app
+```bash
+fhc app stage --app=vgayu6usl4u7ms75tftz7q5g --env=evals-dev
+```
 
 ## API
 ### hello [POST] 
